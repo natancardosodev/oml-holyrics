@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Organizador de Letras Musicais" />
+    <meta name="author" content="Natan Cardoso" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/button.css" />
+    <title>OLM: Organizador de Letras Musicais</title>
+  </head>
+  <body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+          <div class="card-heading"></div>
+          <div class="card-body">
+            <h1 class="title">
+              <strong>OLM</strong>: Organizador de Letras Musicais
+            </h1>
+
+            <label
+              ><strong>Coloque a música do Holyrics a organizar:</strong>
+              <textarea
+                name="myTextarea"
+                id="myTextarea"
+                cols="30"
+                rows="10"
+                style="width: 500px; height: 110px"
+              ></textarea>
+            </label>
+
+            <label style="padding: 10px 0; display: block"
+              ><strong>Resultado:</strong>
+              <textarea
+                name="outputTextarea"
+                id="outputTextarea"
+                cols="30"
+                rows="10"
+                disabled
+                style="width: 500px; height: 110px"
+              ></textarea>
+            </label>
+            <div class="footer" style="display: flex; justify-content: center">
+              <button onclick="copyResult()" class="btn">
+                Copiar resultado
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer class="credits">Desenvolvido por Natan Cardoso.</footer>
+      </div>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
