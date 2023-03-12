@@ -368,9 +368,21 @@ input {
   }
 }
 
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 90vw;
+  }
+}
+
 footer.credits {
   text-align: center;
   padding-top: 10px;
   color: #b9b9b9;
   font-size: 12px;
+}
+
+.textarea {
+  width: 500px; 
+  height: 110px;
+  max-width: 70vw;
 }
