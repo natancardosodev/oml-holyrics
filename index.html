@@ -13,14 +13,41 @@
     <title>OLM: Organizador de Letras Musicais</title>
   </head>
   <body>
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+    <div class="page-wrapper bg-blue px-50 font-robo">
       <div class="wrapper wrapper--w680">
         <div class="card card-1">
-          <div class="card-heading"></div>
+          <!-- <div class="card-heading"></div> -->
           <div class="card-body">
             <h1 class="title">
               <strong>OLM</strong>: Organizador de Letras Musicais
             </h1>
+
+            <form action="javascript:searchMusic()">
+              <input
+                type="text"
+                name="titleMusic"
+                placeholder="Nome da Música"
+                id="titleMusic"
+                class="input-busca"
+                required
+              />
+
+              <input
+                type="text"
+                placeholder="Cantor"
+                name="cantor"
+                id="cantor"
+                class="input-busca"
+                required
+              />
+
+              <button type="submit" class="btn-search ">
+                Pesquisar
+              </button>
+            </form>
+
+            <br/>
+            <br/>
 
             <label
               ><strong>Coloque a música do Holyrics a organizar:</strong>
