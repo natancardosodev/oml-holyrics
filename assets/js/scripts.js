@@ -25,22 +25,20 @@ function copyResult() {
 }
 
 async function searchMusic() {
-  dataPesquisa = [];
   const key = 'xx';
-  const typesError = ['song_notfound', 'notfound']
+  inputTextarea.innerHTML = null;
 
   await fetch('https://api.vagalume.com.br/search.php?art='+cantor.value+'&mus='+titleMusic.value+'&extra=relmus&apikey='+key)
     .then((response) => response.json())
     .then((res) => {
-      if (typesError.includes(res.type)) {
-        inputTextarea.innerHTML = 'Música não encontrada.'
-      }
       if (res.mus.length) { 
         inputTextarea.innerHTML = res.mus[0].text;
-        splitText();
       }
     })
     .catch(() => {
-      inputTextarea.innerHTML = 'Ocorreu um erro na requisição.'
+      inputTextarea.innerHTML = 'Música não encontrada.'
+    })
+    .finally(() => {
+      splitText();
     });
 };
