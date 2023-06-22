@@ -13,3 +13,5 @@ Acesse https://natancardosodev.github.io/oml-holyrics/
 Abra o arquivo index.html no seu navegador
 
 ![img](/assets/img/oml-holyrics.png)
+
+![img](/assets/img/demo-oml.gif)
