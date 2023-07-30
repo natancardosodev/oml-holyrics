@@ -16,22 +16,32 @@ function splitText() {
 }
 
 function copyResult() {
-  var copyText = document.getElementById("outputTextarea");
+  outputTextarea.select();
+  outputTextarea.setSelectionRange(0, 99999);
 
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(outputTextarea.value);
+}
 
-  navigator.clipboard.writeText(copyText.value);
+async function pasteMusic() {
+  await navigator.clipboard
+    .readText()
+    .then(
+      cliptext =>
+        (inputTextarea.innerHTML = cliptext),
+      err => console.log(err)
+    );
+  splitText();
+  copyResult();
 }
 
 async function searchMusic() {
   const key = 'xx';
   inputTextarea.innerHTML = null;
 
-  await fetch('https://api.vagalume.com.br/search.php?art='+cantor.value+'&mus='+titleMusic.value+'&extra=relmus&apikey='+key)
+  await fetch('https://api.vagalume.com.br/search.php?art=' + cantor.value + '&mus=' + titleMusic.value + '&extra=relmus&apikey=' + key)
     .then((response) => response.json())
     .then((res) => {
-      if (res.mus.length) { 
+      if (res.mus.length) {
         inputTextarea.innerHTML = res.mus[0].text;
       }
     })
