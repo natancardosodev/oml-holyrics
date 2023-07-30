@@ -2,6 +2,7 @@ var inputTextarea = document.getElementById("myTextarea");
 var outputTextarea = document.getElementById("outputTextarea");
 var titleMusic = document.getElementById("titleMusic");
 var cantor = document.getElementById("cantor");
+var msg = document.getElementById("feedback-copy");
 
 inputTextarea.addEventListener("input", function () {
   splitText();
@@ -20,6 +21,14 @@ function copyResult() {
   outputTextarea.setSelectionRange(0, 99999);
 
   navigator.clipboard.writeText(outputTextarea.value);
+  showMsgCopy();
+}
+
+function showMsgCopy() {
+  msg.style.display = "flex";
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 1200);
 }
 
 async function pasteMusic() {
