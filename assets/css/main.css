@@ -420,3 +420,12 @@ footer.credits {
   margin-right: 5px;
   border: 1px solid #333;
 }
+
+#feedback-copy {
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex; 
+  justify-content: center;
+}
