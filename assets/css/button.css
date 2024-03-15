@@ -6,7 +6,7 @@
   font-size: 14px;
   color: #fff;
   background-color: #5cb811;
-  padding: 5px 30px;
+  padding: 5px 20px;
   border: solid #5cb811 2px;
   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
   border-radius: 50px;
@@ -21,7 +21,7 @@
 
 .btn:hover {
   transition: 1000ms;
-  padding: 5px 50px;
+  padding: 5px 20px;
   transform: translateY(-0px);
   background-color: #fff;
   color: #5cb811;
